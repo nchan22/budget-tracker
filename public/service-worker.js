@@ -18,3 +18,13 @@ const FILES_TO_CACHE = [
   "./icons/icon-96x96.png",
   "./icons/icon-72x72.png",
 ];
+
+//  add function to install the cache
+self.addEventListener("install", function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log("installing cache : " + CACHE_NAME);
+      return cache.addAll(FILES_TO_CACHE);
+    })
+  );
+});
