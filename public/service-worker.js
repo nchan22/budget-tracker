@@ -1,3 +1,7 @@
+const APP_PREFIX = "BudgetTracker-";
+const VERSION = "version_01";
+const CACHE_NAME = APP_PREFIX + VERSION;
+
 // added files needed to be cached for offline usage
 const FILES_TO_CACHE = [
   "./index.html",
